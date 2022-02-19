@@ -1,8 +1,7 @@
 version: "3.3"
 
-services:
-   deploy:
-      container_name: qa_ser
+services: 
+    qa_ser:
       image: shaikghouse/muni
       tty: true
       volumes:
@@ -12,31 +11,28 @@ services:
       networks: 
          - net
 
-   deploy:
-      container_name: uat_ser
+    uat_ser:
       image: shaikghouse/muni
       tty: true
       volumes:
          - "/home/workspace/dev-data:/home/workspace/dev-data/"
-      ports: 
+      ports:
          - "8022:8080"
       networks:
          - net
 
-   deploy:
-      container_name: prod
+    prod:
       image: shaikghouse/muni
       tty: true
       volumes:
          - "/home/workspace/dev-data:/home/workspace/dev-data/"
-      ports: 
+      ports:
          - "8023:8080"
       networks:
          - net
 
 volumes: 
    cont_data:
-
 
 networks:
    net:
