@@ -24,6 +24,11 @@ pipeline {
                 git branch: 'master',url:'https://github.com/github6472/drepo.git'
             }
         }
+        stage('docker push '){
+            steps{
+                sh 'docker push shaikghouse/muni'
+            }
+        }
     }
 }
 
