@@ -11,7 +11,7 @@ pipeline {
         }
         stage('docker createe image') {
             steps {
-                sh 'docker build -t /home/workspace/dev-data/docimg/ shaikghouse/muni . '
+                sh 'docker build -t shaikghouse/muni . '
             }
         }
         stage('git checkout') {
