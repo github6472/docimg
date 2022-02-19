@@ -11,8 +11,8 @@ services:
          - "8021:8080"
       networks: 
          - net
-     
-services:
+
+
    deploy:
       container_name: uat_ser
       image: shaikghouse/muni
@@ -24,7 +24,7 @@ services:
       networks:
          - net
 
-services: 
+
    deploy:
       container_name: prod
       image: shaikghouse/muni
