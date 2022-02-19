@@ -14,7 +14,7 @@ pipeline {
                 sh 'docker build -t shaikghouse/muni . '
             }
         }
-        stage('git checkout') {
+        stage('code pull') {
             steps {
                 git branch: 'master',url:'https://github.com/github6472/drepo.git'
             }
